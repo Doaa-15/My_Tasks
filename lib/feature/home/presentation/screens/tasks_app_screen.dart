@@ -7,7 +7,7 @@ import 'package:add_tasks/model/model.dart';
 import 'package:flutter/material.dart';
 
 class TasksAppScreen extends StatefulWidget {
-  TasksAppScreen({super.key});
+ const TasksAppScreen({super.key});
 
   @override
   State<TasksAppScreen> createState() => _TasksAppScreenState();
@@ -47,7 +47,7 @@ class _TasksAppScreenState extends State<TasksAppScreen> {
           showModalBottomSheet(
             context: context,
             builder: (context) => Container(
-              padding: EdgeInsets.all(10),
+              padding:const EdgeInsets.all(10),
               child: Column(
                 spacing: 15,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +55,7 @@ class _TasksAppScreenState extends State<TasksAppScreen> {
                   //textfield=>task
                   TextField(
                     controller: taskcontroller,
-                    decoration: InputDecoration(
+                    decoration:  const InputDecoration(
                       labelText: "task",
                       border: OutlineInputBorder(),
                     ),
@@ -63,7 +63,7 @@ class _TasksAppScreenState extends State<TasksAppScreen> {
                   //textfield=> description
                   TextField(
                     controller: descriptioncontroller,
-                    decoration: InputDecoration(
+                    decoration:  const InputDecoration(
                       labelText: "description",
                       border: OutlineInputBorder(),
                     ),
@@ -83,16 +83,16 @@ class _TasksAppScreenState extends State<TasksAppScreen> {
                       setState(() {});
                       Navigator.pop(context);
                     },
-                    child: Text("Create Now", style:TextStyle(color:AppColor.secondcolor ) ),
+                    child:const Text("Create Now", style:TextStyle(color:AppColor.secondcolor ) ),
                   ),
                 ],
               ),
             ),
           );
         },
-        child: Icon(Icons.add, color: AppColor.secondcolor),
+        child:const Icon(Icons.add, color: AppColor.secondcolor),
       ),
-      body: TasksAppBody(),
+      body: const TasksAppBody(),
     );
   }
 }

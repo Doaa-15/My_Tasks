@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:add_tasks/core/reuse/text_style.dart';
 
 class TasksAppBody extends StatefulWidget {
-  TasksAppBody({super.key});
+   const TasksAppBody({super.key});
 
   @override
   State<TasksAppBody> createState() => _TasksAppBodyState();
@@ -37,7 +37,7 @@ class _TasksAppBodyState extends State<TasksAppBody> {
             shrinkWrap: true,
             itemBuilder: (context, index) {
               return Card(
-                margin: EdgeInsets.all(10),
+                margin:const EdgeInsets.all(10),
                 color: AppColor.primarycolor,
                 child: Padding(
                   padding: const EdgeInsets.all(10),
@@ -50,7 +50,7 @@ class _TasksAppBodyState extends State<TasksAppBody> {
                         "Task ${snapshot.data![index].task}",
                         style: TextStyles.headline_1,
                       ),
-                      SizedBox(width: 200),
+                     const SizedBox(width: 200),
                      // description
                       Text(
                         "Desciption : ${snapshot.data![index].description}",
@@ -69,7 +69,7 @@ class _TasksAppBodyState extends State<TasksAppBody> {
                            showModalBottomSheet(
             context: context,
             builder: (context) => Container(
-              padding: EdgeInsets.all(10),
+              padding:const EdgeInsets.all(10),
               child: Column(
                 spacing: 15,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -77,7 +77,7 @@ class _TasksAppBodyState extends State<TasksAppBody> {
                   // task
                   TextField(
                     controller: taskcontroller,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: "task",
                       border: OutlineInputBorder(),
                     ),
@@ -85,7 +85,7 @@ class _TasksAppBodyState extends State<TasksAppBody> {
                   //description
                   TextField(
                     controller: descriptioncontroller,
-                    decoration: InputDecoration(
+                    decoration:  const InputDecoration(
                       labelText: "description",
                       border: OutlineInputBorder(),
                     ),
@@ -141,7 +141,7 @@ setState(() {});
             },
           );
         } else {
-          return Center(child: CircularProgressIndicator()); //if data is waiting
+          return const Center( child: CircularProgressIndicator()); //if data is waiting
         }
       },
     );

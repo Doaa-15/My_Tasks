@@ -1,6 +1,6 @@
 import 'package:add_tasks/core/theme/color.dart';
 import 'package:flutter/material.dart';
-class ButtonStyles {
+class  ButtonStyles {
   static  ButtonStyle icon_button_style = ElevatedButton.styleFrom(
   
    backgroundColor: AppColor.primarycolor,
@@ -11,12 +11,12 @@ class ButtonStyles {
 
   );
 
-    static  ButtonStyle text_button_style = ElevatedButton.styleFrom(
+    static   ButtonStyle  text_button_style = ElevatedButton.styleFrom(
    backgroundColor: AppColor.primarycolor,
    shape: RoundedRectangleBorder(
     borderRadius: BorderRadiusGeometry.circular(10),
     ),
-   textStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color:AppColor.secondcolor),
+   textStyle:const TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color:AppColor.secondcolor),
 
   );
 }
